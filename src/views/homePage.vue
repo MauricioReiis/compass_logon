@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 import headerHome from '@/containers/header_home'
 import mainHome from '@/containers/main_home'
 import footerHome from '@/containers/footer_home'
@@ -20,12 +19,4 @@ export default {
        footerHome,
     }
 }
-
 </script>  
-
-<style>
-/* div{
-  overflow-y: hidden;
-  overflow-x: hidden;
-} */
-</style>
