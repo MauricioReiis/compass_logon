@@ -1,18 +1,53 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-  </div>
+
+  <p :class="{
+  textFooterContent: textFooterData,
+  sideBar: sideBarData,
+  refreshText: refreshTextData,
+  seconds: secondsData,
+  }">{{ text }}</p>
+
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'textContent',
   props: {
-    msg: String
-  }
+    
+    textFooterContent: {
+      default: false,
+    },
+
+    sideBar:{
+      default: false,
+    },
+
+    refreshText:{
+      default: false,
+    },
+
+    seconds:{
+      default: false,
+    },
+
+    text: {
+      type: String,
+      required: true,
+      default: 'Texto Padrão',
+    },
+  },
+
+  data(){
+    return{
+      textFooterData: this.textFooterContent,
+      sideBarData: this.sideBar,
+      refreshTextData: this.refreshText,
+      secondsData: this.seconds,
+    }
+  },
 }
 </script>
 
-<style scoped lang="scss">
-
+<style lang="scss" scoped>
+@import './index.scss';
 </style>

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import loginPage from '../views/login/index.vue'
+import loginPage from '@/views/loginPage.vue'
 
 Vue.use(VueRouter)
 
@@ -13,10 +13,8 @@ const routes = [
   {
     path: '/home',
     name: 'home',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/home/index.vue')
+
+    component: () => import('@/views/homePage.vue')
   }
 ]
 
