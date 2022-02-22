@@ -10,7 +10,6 @@
       </div>
       <textContent continueText=true :style="{'grid-column':7}" text="Continuar Navegando"/>
       <div id="buttonLogout" :style="{'grid-column':8}">Logout</div>
-      
   </section>
 </template>
 

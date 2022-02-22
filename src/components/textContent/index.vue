@@ -1,20 +1,20 @@
 <template>
-
-  <p :class="{
-  textFooterContent: textFooterData,
-  sideBar: sideBarData,
-  refreshText: refreshTextData,
-  seconds: secondsData,
-  continueText: continueTextData,
-  }">{{ text }}</p>
-
+  <div>
+    <p :class="{
+    textFooterContent: textFooterData,
+    sideBar: sideBarData,
+    refreshText: refreshTextData,
+    seconds: secondsData,
+    continueText: continueTextData,
+    paragraphContent: paragraphContentData,
+    }">{{ text }}</p>
+   </div>
 </template>
 
 <script>
 export default {
   name: 'textContent',
   props: {
-    
     textFooterContent: {
       default: false,
     },
@@ -35,6 +35,10 @@ export default {
       default: false,
     },
 
+    paragraphContent:{
+      default: false,
+    },
+
     text: {
       type: String,
       required: true,
@@ -49,6 +53,7 @@ export default {
       refreshTextData: this.refreshText,
       secondsData: this.seconds,
       continueTextData: this.continueText,
+      paragraphContentData: this.paragraphContent,
     }
   },
 }
