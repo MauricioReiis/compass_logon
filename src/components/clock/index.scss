@@ -1,7 +1,17 @@
 section{
-    background-color: aqua;
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
 
-    h1{
-        font-size: 60px;
+        h1{
+            padding-top: 10%;
+            align-items: center;
+            font-size: 144px;
+            font-weight: bold;
+            color: #222222;
+        }
     }
 }

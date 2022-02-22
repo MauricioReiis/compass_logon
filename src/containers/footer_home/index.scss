@@ -6,13 +6,21 @@ section{
     grid-template-columns: 16.6% 27.6% 7.8% 5.5% 5% 23.5% 7% 7%;
     color: #FFFFFF;
     display: grid;
-    height: 10%;
+    height: 10vh;
     width: 100%;
-    
-    div{
-        margin-left: 10px;
+}
+
+#buttonLogout{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-weight: 700;
+
+    &:hover{
+        color: #c13316;
     }
-    
 }
 
 #seicentos{

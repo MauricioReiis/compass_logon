@@ -2,19 +2,17 @@
   <section> 
     <div> 
       <h1>{{ condHours }}</h1>
-      <textContent :text= "condWeek" />
+      <textContent :style="{'font-size': '15px', }" :text= "condWeek" />
     </div>
   </section>
 </template>
 
 
 <script>
-import textContent from '@/components/textContent'
-// import week from '@/constants/dayWeek'
- 
+
+import textContent from '@/components/textContent' 
 import {Months} from '@/constants/monthsYear'
 import {Days} from '@/constants/dayWeek'
-
 
 export default {
     name: "clock",

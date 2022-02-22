@@ -5,6 +5,7 @@
   sideBar: sideBarData,
   refreshText: refreshTextData,
   seconds: secondsData,
+  continueText: continueTextData,
   }">{{ text }}</p>
 
 </template>
@@ -30,6 +31,10 @@ export default {
       default: false,
     },
 
+    continueText:{
+      default: false,
+    },
+
     text: {
       type: String,
       required: true,
@@ -43,6 +48,7 @@ export default {
       sideBarData: this.sideBar,
       refreshTextData: this.refreshText,
       secondsData: this.seconds,
+      continueTextData: this.continueText,
     }
   },
 }
