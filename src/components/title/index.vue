@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1 :class="{firstTitle: firstTitleData}" v-if="type === 'h1'"> 
+      <h1 :class="{firstTitle: firstTitleData, salutationTitle: salutationTitleData}" v-if="type === 'h1'"> 
           {{ text }}
       </h1>
       <h2 :class="{titleContent: titleContentData}" v-else-if="type === 'h2'"> 
@@ -40,13 +40,18 @@ export default {
 
         titleContent:{
             default: false,
-        }
+        },
+
+        salutationTitle:{
+            default: false,
+        },
     },
 
     data(){
         return{
             titleContentData: this.titleContent,
             firstTitleData: this.firstTitle,
+            salutationTitleData: this.salutationTitle
         }
     },
 }

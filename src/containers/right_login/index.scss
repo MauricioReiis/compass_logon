@@ -1,6 +1,15 @@
-.div{
+div{
     display: flex;
+    justify-content: center;
     background-color: aqua;
-    background-image: url("../../assets/login.png");
+    background-image: url("@/assets/login.png");
+    background-size: cover;
+    width: 50vw;
+    
+
+    img{
+        height: 70px;
+        margin-top: 3%;
+    }
 
 }

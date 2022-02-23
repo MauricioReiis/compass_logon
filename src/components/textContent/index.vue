@@ -7,6 +7,10 @@
     seconds: secondsData,
     continueText: continueTextData,
     paragraphContent: paragraphContentData,
+    greetingParagraph: greetingParagraphData,
+    loginText: loginTextData,
+    errorMessage: errorMessageData,
+  
     }">{{ text }}</p>
    </div>
 </template>
@@ -39,11 +43,24 @@ export default {
       default: false,
     },
 
+    greetingParagraph:{
+      default: false,
+    },
+
+    loginText:{
+      default: false,
+    },
+
+    errorMessage:{
+      default: false,
+    },
+
     text: {
       type: String,
       required: true,
       default: 'Texto Padrão',
     },
+
   },
 
   data(){
@@ -54,6 +71,9 @@ export default {
       secondsData: this.seconds,
       continueTextData: this.continueText,
       paragraphContentData: this.paragraphContent,
+      greetingParagraphData: this.greetingParagraph,
+      loginTextData: this.loginText,
+      errorMessageData: this.errorMessage,
     }
   },
 }

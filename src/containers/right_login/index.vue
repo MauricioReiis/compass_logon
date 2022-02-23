@@ -1,6 +1,6 @@
 <template>
   <div style="{'backgorund-color': 'black'}"> 
-    <img src="../../assets/white_logo.png">
+    <img draggable="false" src="@/assets/white_logo.png">
   </div>
 </template>
 
