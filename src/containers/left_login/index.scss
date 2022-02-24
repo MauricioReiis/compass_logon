@@ -13,9 +13,18 @@ section{
         width: 420px;
         font-size: 16px;
     }
-
+    
     #salutation{
         margin-bottom: 150px;
     }
-}
 
+    #errorPassaword{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 25px;
+        margin: 30px;
+        width: 100%;
+    }
+}

@@ -1,20 +1,26 @@
-.firstTitle{
-    font-size: 36px;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #C12D18;
-}
+div{
+    display: flex;
+    justify-content: center;
+    
+    .firstTitle{
+        font-size: 36px;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #C12D18;
+    }
+    
+    .titleContent{
+        font-size: 64px;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #C12D18;
+    }
+    
+    .salutationTitle{
+        font-size: 60px;
+        font-weight: bold;
+        color: #E0E0E0;
+        margin-bottom: 25px;
+    }
 
-.titleContent{
-    font-size: 64px;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #C12D18;
-}
-
-.salutationTitle{
-    font-size: 60px;
-    font-weight: bold;
-    color: #E0E0E0;
-    margin-bottom: 25px;
 }

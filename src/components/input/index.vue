@@ -1,16 +1,17 @@
 <template>
   <div>
         <input :class="{inputContent: inputContentData, 
-        inputError: inputErrorData, 
+        inputError: statusError, 
         inputButton: inputButtonData}" 
+        @keyup="$emit('input',$event.target.value)" 
         :type="type" 
-        :value="value"
-        :placeholder="placeholder">
+        :value="value" 
+        :placeholder="placeholder">       
+        <img v-if="imageName" :src="require(`@/assets/${imageName}`)" :alt="alt">
   </div>
 </template>
-
 <script>
-
+import { mapState } from 'vuex'
 export default {
     name: "Input",
     props:{
@@ -20,10 +21,6 @@ export default {
         },
 
         inputContent:{
-            default: false,
-        },
-
-        inputError:{
             default: false,
         },
 
@@ -38,14 +35,26 @@ export default {
         value:{
             type: String,
         },
-    },
 
+        imageName:{
+            type: String,
+        },
+
+        alt:{
+            type: String,
+        }
+    },
     data(){
         return{
             inputContentData: this.inputContent,
             inputErrorData: this.inputError,
             inputButtonData: this.inputButton,
+            
         }
+    },
+
+    computed:{
+        ...mapState(["statusError"])
     }
 }
 </script>
