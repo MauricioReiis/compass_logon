@@ -1,8 +1,8 @@
 <template>
   <section> 
     <div> 
-      <h1>{{ condHours }}</h1>
-      <textContent :style="{'font-size': '15px', }" :text= "condWeek" />
+      <Title numberClock=true type='h1' :text= "condHours"/>
+      <textContent textDay=true :text= "condWeek" />
     </div>
   </section>
 </template>
@@ -10,7 +10,8 @@
 
 <script>
 
-import textContent from '@/components/textContent' 
+import textContent from '../textContent'
+import Title from '../title'
 import {Months} from '@/constants/monthsYear'
 import {Days} from '@/constants/dayWeek'
 
@@ -18,6 +19,7 @@ export default {
     name: "clock",
     components: {
        textContent,
+       Title,
     },
 
     data() {

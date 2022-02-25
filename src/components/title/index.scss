@@ -5,22 +5,35 @@ div{
     .firstTitle{
         font-size: 36px;
         margin-top: 15px;
-        font-weight: bold;
+        font-weight: 600;
         color: #C12D18;
     }
     
     .titleContent{
         font-size: 64px;
         margin-top: 15px;
-        font-weight: bold;
+        font-weight: 600;
         color: #C12D18;
     }
     
     .salutationTitle{
         font-size: 60px;
-        font-weight: bold;
+        font-weight: 400;
         color: #E0E0E0;
         margin-bottom: 25px;
     }
 
+    .numberClock{  
+        padding-top: 10%;
+        align-items: center;
+        font-size: 144px;
+        font-weight: 600;
+        color: #222222;
+    }
+
+    .degreesCelsius{
+        font-size: 48px;
+        color: #222222;
+        font-weight: 600;
+    }
 }

@@ -1,18 +1,21 @@
 <template>
   <div> 
         <img draggable="false" src="../../assets/black_logo.png" alt="Compass black logo">
-        <clock></clock>
-        <h1>AQUI FICARÁ O CLIMA</h1>
+        <clock/>
+        <weather/>
   </div>
 </template>
 
 <script>
+
 import clock from '@/components/clock'
+import weather from '../../components/weather'
 
 export default {
     name: 'headerHome',
     components: {
       clock,
+      weather,
     }
 }
 </script>

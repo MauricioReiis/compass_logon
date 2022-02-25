@@ -1,0 +1,23 @@
+section{
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    height: 80px;
+
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #clima{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5%;
+
+        img{
+            display: flex;
+            height: 43px;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 <template>
   <div>
     <p :class="{
+    textDay: textDayData,
     textFooterContent: textFooterData,
     sideBar: sideBarData,
     refreshText: refreshTextData,
@@ -20,6 +21,10 @@ export default {
   name: 'textContent',
   props: {
     textFooterContent: {
+      default: false,
+    },
+
+    textDay:{
       default: false,
     },
 
@@ -65,6 +70,7 @@ export default {
 
   data(){
     return{
+      textDayData: this.textDay,
       textFooterData: this.textFooterContent,
       sideBarData: this.sideBar,
       refreshTextData: this.refreshText,

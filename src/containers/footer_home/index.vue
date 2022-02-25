@@ -4,9 +4,9 @@
         Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar."/>
       <span><textContent sideBar=true :style="{'grid-column':3}" text=""/></span>
       <textContent refreshText=true :style="{'grid-column':4}" text="Aplication refresh in"/>
-      <div>
+      <div :style="{'grid-column':5}">
         <p id="seicentos">600</p>
-        <textContent seconds=true :style="{'grid-column':5}" text="Seconds"/>
+        <textContent seconds=true text="Seconds"/>
       </div>
       <textContent continueText=true :style="{'grid-column':7}" text="Continuar Navegando"/>
       <div id="buttonLogout" :style="{'grid-column':8}">Logout</div>

@@ -1,12 +1,12 @@
 <template>
   <div>
-      <h1 :class="{firstTitle: firstTitleData, salutationTitle: salutationTitleData}" v-if="type === 'h1'"> 
+      <h1 :class="{firstTitle: firstTitleData, salutationTitle: salutationTitleData, numberClock: numberClockData,}" v-if="type === 'h1'"> 
           {{ text }}
       </h1>
       <h2 :class="{titleContent: titleContentData}" v-else-if="type === 'h2'"> 
           {{ text }}
       </h2>
-      <h3 :class="{titleContent: titleContentData}" v-else-if="type === 'h3'">
+      <h3 :class="{titleContent: titleContentData, degreesCelsius: degreesCelsiusData}" v-else-if="type === 'h3'">
           {{ text }}
       </h3>
       <h4 :class="{titleContent: titleContentData}" v-else-if="type === 'h4'">
@@ -29,9 +29,18 @@ export default {
             type: String,
             require: true,
         },
+
         text:{
             type: String,
             require: true,
+        },
+
+        numberClock:{
+            default: false,
+        },
+
+        degreesCelsius:{
+            default: false,
         },
 
         firstTitle:{
@@ -51,7 +60,9 @@ export default {
         return{
             titleContentData: this.titleContent,
             firstTitleData: this.firstTitle,
-            salutationTitleData: this.salutationTitle
+            salutationTitleData: this.salutationTitle,
+            degreesCelsiusData: this.degreesCelsius,
+            numberClockData: this.numberClock,
         }
     },
 }
