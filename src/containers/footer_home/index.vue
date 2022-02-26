@@ -5,23 +5,32 @@
       <span><textContent sideBar=true :style="{'grid-column':3}" text=""/></span>
       <textContent refreshText=true :style="{'grid-column':4}" text="Aplication refresh in"/>
       <div :style="{'grid-column':5}">
-        <p id="seicentos">600</p>
+        <timer/>
         <textContent seconds=true text="Seconds"/>
       </div>
       <textContent continueText=true :style="{'grid-column':7}" text="Continuar Navegando"/>
-      <div id="buttonLogout" :style="{'grid-column':8}">Logout</div>
+      <div id="buttonLogout" :style="{'grid-column':8}" @click="logout">Logout</div>
   </section>
 </template>
 
 <script>
 
 import textContent from '@/components/textContent'
+import timer from '@/components/timer'
+import router from '@/router/index.js'
 
 export default {
     name: "footerHome",
     components:{
       textContent,
+      timer,
+    },
+
+    methods:{
+      logout(){
+        router.push({name:'login'})
     }
+  }
 }
 </script>
 

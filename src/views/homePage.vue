@@ -14,9 +14,9 @@ import footerHome from '@/containers/footer_home'
 export default {
     name: 'homePage',
     components: {
-       headerHome,
-       mainHome,
-       footerHome,
-    }
+      headerHome,
+      mainHome,
+      footerHome,
+  },
 }
 </script>  

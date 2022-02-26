@@ -6,7 +6,7 @@
         <textContent greetingParagraph=true text="Para continuar navegando de forma segura, efetue o login na rede."/> 
       </div>
       <div> 
-        <form @submit.prevent="submitForm">
+        <form @submit.prevent="validation">
           <textContent loginText=true text="Login"/> 
           <Input inputContent=true type="text" placeholder="Usuário" imageName="logo_user.png" alt="Icon User" v-model="userData"/>
           <Input inputContent=true type="password" placeholder="Senha" imageName="logo_password.png" alt="Icon password" v-model="passwordData"/>
@@ -20,9 +20,7 @@
   </section>
 </template>
 
-
 <script>
-
 import Title from "@/components/title"
 import textContent from "@/components/textContent"
 import Input from "@/components/input"
@@ -46,18 +44,8 @@ export default {
 
   },
   methods:{
-    ...mapMutations(["setStatusError"]),
-    submitForm(){
-      if (this.userData == "admin" && this.passwordData == "admin"){
-        this.$router.push({name:'home'})
-        alert("Você logou")
-
-      } else {
-        this.setStatusError()
-        this.logar = true
-      }
-    }
-  }
+    ...mapMutations(["setStatusError", "validation"]),
+  },
 }
 </script>
 

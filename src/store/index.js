@@ -1,14 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import router from '../router/index.js'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    statusError: false
-    // array.forEach(element => {
-      
-    // });
+    statusError: false,
+
+    login: 'admin',
+    password: 'admin'
+  
   },
 
   getters: {
@@ -17,6 +19,16 @@ export default new Vuex.Store({
   mutations: {
     setStatusError(state){
       state.statusError = true
+    },
+
+    validation(state){
+      if(state.login == 'admin' && state.password == 'admin'){
+        router.push({name:'home'})
+
+      } else { 
+        this.setStatusError()
+        this.logar = true
+      }
     }
   },
 

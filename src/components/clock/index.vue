@@ -1,7 +1,7 @@
 <template>
   <section> 
     <div> 
-      <Title numberClock=true type='h1' :text= "condHours"/>
+      <Title numberClock=true type='h1' :text="condHours"/>
       <textContent textDay=true :text= "condWeek" />
     </div>
   </section>

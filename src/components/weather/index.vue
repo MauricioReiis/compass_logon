@@ -100,7 +100,7 @@ export default {
       return addIcon;
     },
   },
-
+  
   created() {
     this.weatherActual();
     this.regionAbbreviation();
