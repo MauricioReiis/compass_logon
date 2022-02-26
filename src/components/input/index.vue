@@ -49,7 +49,6 @@ export default {
             inputContentData: this.inputContent,
             inputErrorData: this.inputError,
             inputButtonData: this.inputButton,
-            
         }
     },
 

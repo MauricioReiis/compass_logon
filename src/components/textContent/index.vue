@@ -2,6 +2,7 @@
   <div>
     <p :class="{
     textDay: textDayData,
+    textCity: textCityData,
     textFooterContent: textFooterData,
     sideBar: sideBarData,
     refreshText: refreshTextData,
@@ -25,6 +26,10 @@ export default {
     },
 
     textDay:{
+      default: false,
+    },
+
+    textCity:{
       default: false,
     },
 
@@ -71,6 +76,7 @@ export default {
   data(){
     return{
       textDayData: this.textDay,
+      textCityData: this.textCity,
       textFooterData: this.textFooterContent,
       sideBarData: this.sideBar,
       refreshTextData: this.refreshText,

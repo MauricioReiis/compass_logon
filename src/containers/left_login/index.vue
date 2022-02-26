@@ -28,6 +28,7 @@ import textContent from "@/components/textContent"
 import Input from "@/components/input"
 import { mapMutations } from 'vuex'
 
+
 export default {
   name: "leftLogin",
   components:{
@@ -47,7 +48,8 @@ export default {
   methods:{
     ...mapMutations(["setStatusError"]),
     submitForm(){
-      if (this.userData == "a" && this.passwordData == "a"){
+      if (this.userData == "admin" && this.passwordData == "admin"){
+        this.$router.push({name:'home'})
         alert("Você logou")
 
       } else {
