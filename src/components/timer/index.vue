@@ -15,32 +15,33 @@ export default {
         }
     },
 
-    data() {
+   data() {
         return {
-            countDown: "10"
+            timerEnabled: true,
+            countDown: ''
         }
     },
 
     methods: {
-        countDownTimer() {
-            if(this.countDown > 0) {
-                setTimeout(() => {
-                    this.countDown -= 1
-                    this.countDownTimer()
-                }, 1000)
-
-            } else {
-                 setTimeout(() => {
-                     this.countDownTimer()
-                    this.countDown == 0
-                    router.push({name:'login'})
-                }, 1000)
+        increment() {
+            if (this.timerEnabled) {
+                this.countDown--;
+                if (this.countDown == 0){
+                    this.pause()
+                }
             }
+        },
+        pause() {
+            this.timerEnabled = false;
+            router.push({name:'login'})
         }
     },
 
     created(){
-        this.countDownTimer()
+        this.countDown = 600
+        setInterval(() => {
+        this.increment()
+    }, 1000);
     }
 }
 

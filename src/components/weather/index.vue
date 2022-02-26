@@ -17,7 +17,8 @@
 <script>
 import Title from "../title";
 import textContent from "../textContent";
-import regionAbbreviation from "../../constants/regions";
+import regionAbbreviation from "../../constants/regions.js";
+
 
 export default {
   name: "weather",
@@ -103,7 +104,6 @@ export default {
   
   created() {
     this.weatherActual();
-    this.regionAbbreviation();
   },
 };
 </script>
