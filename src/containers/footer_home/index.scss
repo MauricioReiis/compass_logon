@@ -6,9 +6,15 @@ section{
     grid-template-columns: 16.6% 27.6% 7.8% 5.5% 7% 21.5% 7% 7%;
     color: #FFFFFF;
     display: grid;
-    height: 100px;
+    height: 10vh;
     bottom: 0;
     width: 100%;
+
+    @media (max-width: 1000px){
+        background: #FFFFFF;
+        overflow-x: hidden;
+        overflow-x: hidden;
+    }
 }
 
 #buttonLogout{
@@ -22,12 +28,22 @@ section{
     &:hover{
         color: #c13316;
     }
+
+    @media (max-width: 1426px){
+        margin-right: 10px;
+    }
+
+    @media (max-width: 1000px){
+        position: relative;
+        overflow-x: hidden;
+        overflow-x: hidden;
+
+        width: 330%;
+        right: 1330%;
+        height: 10vh;
+
+        background: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);
+    }
+
 }
 
-#seicentos{
-    display: flex;
-    justify-content: center;
-    height: 42px;
-    font-size: 40px;
-    font-weight: 500;
-}

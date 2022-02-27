@@ -1,7 +1,9 @@
 <template>
   <section>
-      <img draggable="false" src="@/assets/ball_logo_compass.png" alt="Compass main logo">
-      <div>  
+      <div id="logoCompass">
+        <img draggable="false" src="@/assets/ball_logo_compass.png" alt="Compass main logo">
+      </div>
+      <div id="contentMain">  
         <Title firstTitle=true type='h1' text="Our mission is"/>
         <textContent paragraphContent=true text="Nossa missão é"/> 
         <Title titleContent=true type='h2' text="to transform the world"/>

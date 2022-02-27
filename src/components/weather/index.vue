@@ -48,20 +48,14 @@ export default {
           let lat = position.coords.latitude;
 
           fetch(
-            "https://us1.locationiq.com/v1/reverse.php?key=pk.86d8d93a4b08f9dc0fed49fbb3d9df7f&lat=" +
-              lat +
-              "&lon=" +
-              long +
-              "&format=json"
+            "https://us1.locationiq.com/v1/reverse.php?key=pk.86d8d93a4b08f9dc0fed49fbb3d9df7f&lat=" + lat + "&lon=" + long + "&format=json"
           )
             .then((resposta) => resposta.json())
             .then((dadosCity) => {
               this.city = dadosCity.address.city.replace(/ /g, "-");
 
               fetch(
-                "https://api.weatherapi.com/v1/current.json?key=1908e74e14814574bc602922220602&q=" +
-                  this.city +
-                  "a&aqi=no"
+                "https://api.weatherapi.com/v1/current.json?key=1908e74e14814574bc602922220602&q=" + this.city + "a&aqi=no"
               )
                 .then((resposta) => resposta.json())
                 .then((dados) => {
@@ -84,15 +78,12 @@ export default {
 
       if (weather.includes("thunder")) {
         addIcon = "storm";
-      } else if (weather.includes("Sun")) {
+      } else if (weather.includes("Sun") || weather.includes("Clear"))  {
         addIcon = "sun";
       } else if (weather.includes("Fog") || weather.includes("Mist")) {
         addIcon = "cloud";
       } else if (
-        weather.includes("Cloudy") ||
-        weather.includes("Overcast") ||
-        weather.includes("cloudy")
-      ) {
+        weather.includes("Cloudy") || weather.includes("Overcast") || weather.includes("cloudy")) {
         addIcon = "cloudy";
       } else if (weather.includes("rain") || weather.includes("drizzle")) {
         addIcon = "raining";

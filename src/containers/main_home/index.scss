@@ -1,23 +1,50 @@
 section{
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     overflow-y: hidden;
     overflow-x: hidden;
     height: 70vh;
-    width: 100vw;
+    width: 93vw;
+
+    @media (max-width: 1000px){
+        width: 100vw;
+    }
 
     div{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: end;
         text-align: end;
-        padding-right: 40px;
+        
 
+        @media(max-width: 1000px){
+            display: none;
+        }
     }
-    
-    img{
-        position: relative;
-        min-height: 700px;
-        min-height: 720px;
+
+    #contentMain{
+        margin-top: 140px;
+    }
+
+    #logoCompass{
+        @media(max-width: 1000px){
+            display: block;
+        }
+
+        img{
+            display: block;
+
+            @media (max-width: 1920px){
+                width: 580px;
+            }
+
+            @media (max-width: 414px){
+                position: absolute;
+                top: 180px;
+                width: 370px;
+            }
+        }
+
     }
 }

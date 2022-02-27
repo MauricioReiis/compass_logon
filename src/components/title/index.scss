@@ -3,17 +3,65 @@ div{
     justify-content: center;
     
     .firstTitle{
-        font-size: 36px;
+        font-size: 30px;
         margin-top: 15px;
         font-weight: 600;
         color: #C12D18;
+
+        @media (max-width: 1530px){
+            font-size: 28px;
+        }
+
+        @media (max-width: 1385px){
+            font-size: 26px;
+        }
+
+        @media (max-width: 1302px){
+            font-size: 24px;
+        }
+
+        @media (max-width: 1218px){
+            font-size: 22px;
+        } 
+
+        @media (max-width: 1155px){
+            font-size: 20px;
+        }
+
+        @media (max-width: 1052px){
+            font-size: 18px;
+        }
     }
     
     .titleContent{
-        font-size: 64px;
+        font-size: 53px;
         margin-top: 15px;
         font-weight: 600;
         color: #C12D18;
+
+        @media (max-width: 1530px){
+            font-size: 45px;
+        }
+
+        @media (max-width: 1385px){
+            font-size: 40px;
+        }
+
+        @media (max-width: 1302px){
+            font-size: 35px;
+        }
+
+        @media (max-width: 1218px){
+            font-size: 30px;
+        } 
+
+        @media (max-width: 1155px){
+            font-size: 25px;
+        }
+
+        @media (max-width: 1052px){
+            font-size: 20px;
+        }
     }
     
     .salutationTitle{
@@ -26,7 +74,7 @@ div{
     .numberClock{  
         padding-top: 10%;
         align-items: center;
-        font-size: 144px;
+        font-size: 140px;
         font-weight: 600;
         color: #222222;
         height: 115px;

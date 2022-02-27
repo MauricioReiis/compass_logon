@@ -1,5 +1,5 @@
 <template>
-  <div :style="{'background': 'linear-gradient(105.96deg, #FFFFFF 0%, #F0F0F0 97.86%)'}" class="home">
+  <div class="home">
     <headerHome/>
     <mainHome/>
     <footerHome/>
@@ -20,3 +20,10 @@ export default {
   },
 }
 </script>  
+
+<style lang="scss" scoped>
+
+div{
+  background: linear-gradient(105.96deg, #FFFFFF 0%, #F0F0F0 97.86%)
+}
+</style>
