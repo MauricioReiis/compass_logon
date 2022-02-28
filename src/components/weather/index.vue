@@ -3,7 +3,7 @@
     <div id="local">
       <textContent textCity="true" :text="`${localActual}`" />
     </div>
-    <div id="clima">
+    <div id="climate">
       <img
         draggable="false"
         :src="require(`@/assets/${imageName}.png`)"

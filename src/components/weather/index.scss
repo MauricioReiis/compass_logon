@@ -1,27 +1,30 @@
 section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    height: 80px;
+    
     @media(max-width: 1000px){
         display: none;
     }
-
-    display: flex;
-    flex-direction: column;
-    margin: 2%;
-    height: 80px;
 
     div{
         display: flex;
         flex-direction: column;
     }
 
-    #clima{
+    #climate{
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
         margin-top: 5%;
+        width: 115px;
 
         img{
             display: flex;
-            height: 40px;
+            height: 35px;
         }
     }
 }

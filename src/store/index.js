@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import router from '../router/index.js'
+// import router from '../router/index.js'
 
 Vue.use(Vuex)
 
@@ -21,15 +21,12 @@ export default new Vuex.Store({
       state.statusError = true
     },
 
-    validation(state){
-      if(state.login == 'admin' && state.password == 'admin'){
-        router.push({name:'home'})
-
-      } else { 
-        this.setStatusError()
-        this.logar = true
-      }
-    }
+    // validation(users){
+    //   array.forEach(element => {
+    //     users[0]
+        
+    //   });
+    // }
   },
 
   actions: {
