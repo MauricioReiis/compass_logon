@@ -36,7 +36,7 @@ export default {
 
     type: {
         type: String,
-        default: "",
+        default: "h1",
         authenticator: function (value) {
             return ["h1", "h2", "h3", "h4", "h5", "h6"].indexOf(value) !== -1;
         },
@@ -53,7 +53,6 @@ export default {
     backgroundColor:{
         type: String
     }
-
   },
 
   computed: {
