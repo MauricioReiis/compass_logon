@@ -1,15 +1,13 @@
 <template>
   <section> 
     <div> 
-      <Title numberClock=true type='h1' :text="condHours"/>
+      <Title nameClass='numberClock' type='h1' :text="condHours"/>
       <textContent textDay=true :text= "condWeek" />
     </div>
   </section>
 </template>
 
-
 <script>
-
 import textContent from '../textContent'
 import Title from '../title'
 import {Months} from '@/constants/monthsYear'

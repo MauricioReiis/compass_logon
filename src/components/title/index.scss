@@ -3,12 +3,11 @@ div{
     justify-content: center;
     
     .firstTitle{
-        font-size: 30px;
-        margin-top: 15px;
+        font-size: 32px;
         font-weight: 600;
         color: #C12D18;
 
-        @media (max-width: 1530px){
+        @media (max-width: 1572px){
             font-size: 28px;
         }
 
@@ -34,12 +33,11 @@ div{
     }
     
     .titleContent{
-        font-size: 53px;
-        margin-top: 15px;
-        font-weight: 600;
+        font-size: 57px;
         color: #C12D18;
+        font-weight: 600;
 
-        @media (max-width: 1530px){
+        @media (max-width: 1572px){
             font-size: 45px;
         }
 
@@ -69,20 +67,30 @@ div{
         font-weight: 400;
         color: #E0E0E0;
         margin-bottom: 25px;
+
+        @media (max-width: 414px){
+            margin-top: 50%;
+            margin-bottom: 0;
+         }
     }
 
     .numberClock{  
-        padding-top: 10%;
         align-items: center;
         font-size: 140px;
         font-weight: 600;
         color: #222222;
-        height: 115px;
+        line-height: 0.8em;
     }
 
     .degreesCelsius{
         font-size: 48px;
         color: #222222;
         font-weight: 600;
+    }
+
+    .erro401{
+        font-size: 50px;
+        font-weight: bold;
+        color: #222222;
     }
 }

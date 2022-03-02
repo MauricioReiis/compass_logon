@@ -1,70 +1,74 @@
-.inputContent{
-    background-color: transparent;
-    color: #E0E0E0;
-    border-radius: 50px;
-    padding-left: 5%;
-    font-size: 16px;
-    height: 60px;
-    border: 1px solid #FFFFFF;
-    margin-top: 10px;
-
-    &::placeholder{
+div{ 
+    input{
         color: #E0E0E0;
+        font-size: 22px;
+        background-color: transparent;
+        border: 0;
+
+        &::placeholder{
+            color: #E0E0E0;
+        }
+    
+        &:focus{
+            outline-width: 0;
+        }
     }
-
-    &:focus{
-        outline-width: 0;
-    }
-}
-
-.inputError{
-    background-color: transparent;
-    color: #E0E0E0;
-    border-radius: 50px;
-    padding-left: 5%;
-    font-size: 16px;
-    height: 60px;
-    border: 1px solid #E9B425;
-
-    &::placeholder{
+    .inputContent{
+        display: flex;
+        justify-content: center;
+        margin: 5% 0 4% 0;
         color: #E0E0E0;
+        border-radius: 50px;
+        height: 65px;
+        border: 1px solid #FFFFFF;
+
+        input{
+            margin-left: 5%;
+            font-size: 18px;
+            margin-top: 22px;
+            width: 83%;
+        }
+    }
+    
+    .inputButton{
+        border: 0;
+        height: 65px;
+        margin-top: 6%;
+        border-radius: 50px;
+        background: linear-gradient(90deg, #FF2D04 0%, #C13216 100%);
+        box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.63);
+        cursor: pointer;
+        color: #E0E0E0;
+
+        input{
+            cursor: pointer;
+
+            &:hover{
+                color: black;
+                transition: 0.9s;
+            }
+        }
+    
+        @media (max-width: 485px){
+            box-shadow:  1px 1px 1px rgba(0, 0, 0, 0.63);
+        }   
+        
+        @media (max-width: 414px){
+            margin-bottom: 10%;
+        }  
     }
 
-    &:focus{
-        outline-width: 0;
+    
+    img{
+        position: relative;
+        left: 380px;
+        bottom: 22px;
+        width: 20px;
+    
+        @media (max-width: 485px){
+            left: 280px;
+        }
     }
 }
 
-.inputButton{
-    padding: 20px;
-    border: 0;
-    border-radius: 50px;
-    background: linear-gradient(90deg, #FF2D04 0%, #C13216 100%);
-    box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.63);
-    width: 100%;
-    height: 100%;
-    font-size: 18px;
-    cursor: pointer;
-    color: #E0E0E0;
-
-    @media (max-width: 485px){
-        box-shadow:  1px 1px 1px rgba(0, 0, 0, 0.63);
-    }
-
-    &:hover{
-        color: black;
-        transition: 0.9s;
-    }
-}
-
-img{
-    position: relative;
-    left: 380px;
-    bottom: 44px;
-    width: 20px;
-
-    @media (max-width: 485px){
-        left: 280px;
-    }
-}
 

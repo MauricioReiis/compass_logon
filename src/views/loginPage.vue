@@ -1,12 +1,11 @@
 <template>
   <div :style="{'display':'flex'}" class="login">
     <leftLogin/> 
-    <rightLogin/> 
+    <rightLogin/>  
   </div>
 </template>
 
 <script>
-
 import rightLogin from '@/containers/right_login'
 import leftLogin from '@/containers/left_login'
 

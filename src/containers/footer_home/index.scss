@@ -1,49 +1,73 @@
 section{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    background: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);
-    grid-template-columns: 16.6% 27.6% 7.8% 5.5% 7% 21.5% 7% 7%;
-    color: #FFFFFF;
     display: grid;
+    align-items: center;
+    grid-template-columns: 19.6% 27.6% 4.8% 5.5% 7% 21.5% 7% 7%;
+    background: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);
+    color: #FFFFFF;
     height: 10vh;
-    bottom: 0;
     width: 100%;
 
+    @media (max-width: 1390px){
+        grid-template-columns: 19.6% 27.6% 4.8% 5.5% 7% 17.5% 9% 9%;
+    }
+
+    @media (max-width: 1204px){
+        grid-template-columns: 19.6% 27.6% 4.8% 7.5% 9% 9.5% 11% 11%;
+    }
+
     @media (max-width: 1000px){
+        grid-template-columns: 25% 30% 15% 30%;
         background: #FFFFFF;
-        overflow-x: hidden;
-        overflow-x: hidden;
-    }
-}
-
-#buttonLogout{
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    font-weight: 700;
-
-    &:hover{
-        color: #c13316;
     }
 
-    @media (max-width: 1426px){
-        margin-right: 10px;
-    }
-
-    @media (max-width: 1000px){
+    @media (max-width: 414px){
         position: relative;
-        overflow-x: hidden;
-        overflow-x: hidden;
-
-        width: 330%;
-        right: 1330%;
-        height: 10vh;
-
-        background: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);
     }
 
+
+    #sideBar{
+        display: flex;
+        border-left: 1px solid rgb(255, 255, 255);
+        height: 5.5vh;       
+        grid-column: 3;
+        margin-left: 30px;        
+
+        @media (max-width: 1000px){
+            display: none;
+        }
+    }
+
+    #boxSeconds{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        grid-column: 5;
+
+        @media (max-width: 1000px){
+            display: none;
+        }
+    }
+
+    #buttonLogout{
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        grid-column: 8;
+        justify-content: center;
+        height: 100%;
+        font-weight: 700;
+    
+        &:hover{
+            color: #c13316;
+        }
+        
+        @media (max-width: 1000px){
+            background: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);
+            grid-column: 1;
+            order: -1;
+        }
+    }
 }
 

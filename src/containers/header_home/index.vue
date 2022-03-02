@@ -1,8 +1,8 @@
 <template>
   <div> 
-        <img draggable="false" src="../../assets/black_logo.png" alt="Compass black logo">
-        <clock/>
-        <weather/>
+      <img draggable="false" src="@/assets/black_logo.png" alt="Compass black logo">
+      <clock/>
+      <weather/>
   </div>
 </template>
 
