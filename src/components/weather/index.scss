@@ -17,11 +17,12 @@ section{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 5%;
+        align-content: flex-start;
+        margin-bottom: 300px;
 
         img{
-            display: flex;
-            height: 40px;
+            margin-top: 10px;            
+            height: 45px;
         }
     }
 }

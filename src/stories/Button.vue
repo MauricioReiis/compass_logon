@@ -13,10 +13,10 @@ export default {
       type: String,
       required: true,
     },
-    primary: {
-      type: Boolean,
-      default: false,
-    },
+    // primary: {
+    //   type: Boolean,
+    //   default: false,
+    // },
     size: {
       type: String,
       default: 'medium',
@@ -24,7 +24,7 @@ export default {
         return ['small', 'medium', 'large'].indexOf(value) !== -1;
       },
     },
-    backgroundColor: {
+    color: {
       type: String,
     },
   },
@@ -40,7 +40,7 @@ export default {
     },
     style() {
       return {
-        backgroundColor: this.backgroundColor,
+        color: this.color,
       };
     },
   },

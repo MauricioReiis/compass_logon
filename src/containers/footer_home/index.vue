@@ -18,6 +18,7 @@
 import textContent from '@/components/textContent'
 import timer from '@/components/timer'
 import router from '@/router/index.js'
+import { mapMutations } from 'vuex'
 
 export default {
     name: "footerHome",
@@ -27,8 +28,10 @@ export default {
     },
 
     methods:{
+      ...mapMutations(['setStartLogout']),
       logout(){
         router.push({name:'login'})
+        this.setStartLogout()
     }
   }
 }

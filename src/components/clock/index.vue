@@ -34,29 +34,29 @@ export default {
     }
   },
     methods:{
-        clockActual(){
-            let date = new Date()
-            let hours = date.getHours()
-            let minutes =date.getMinutes()
-            this.hours = hours
-            this.minutes = minutes
-            let condHours = `${hours <= 9 ? "0" : ""}${hours}:${minutes <=9 ? "0" : ""}${minutes}`
-            this.condHours = condHours   
+      clockActual(){
+          let date = new Date()
+          let hours = date.getHours()
+          let minutes =date.getMinutes()
+          this.hours = hours
+          this.minutes = minutes
+          let condHours = `${hours <= 9 ? "0" : ""}${hours}:${minutes <=9 ? "0" : ""}${minutes}`
+          this.condHours = condHours   
 
-            let weekDay = date.getDay();
-            this.weekDay = weekDay;
+          let weekDay = date.getDay();
+          this.weekDay = weekDay;
 
-            let day = date.getDate();
-            this.day = day
+          let day = date.getDate();
+          this.day = day
 
-            let month = date.getMonth();
-            this.month = month
+          let month = date.getMonth();
+          this.month = month
 
-            let year = date.getFullYear();
-            this.year = year
+          let year = date.getFullYear();
+          this.year = year
 
-            let condWeek = `${Days[weekDay]}, ${day<=9 ? "0" : ""}${day} de ${Months[month]} de ${year}`
-            this.condWeek = condWeek
+          let condWeek = `${Days[weekDay]}, ${day<=9 ? "0" : ""}${day} de ${Months[month]} de ${year}`
+          this.condWeek = condWeek
     }
   },
     created(){
