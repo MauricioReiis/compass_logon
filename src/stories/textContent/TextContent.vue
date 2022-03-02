@@ -15,7 +15,7 @@ export default {
 
       apply: {
         type: String,
-        validator: function (value) {
+        authenticator: function (value) {
         return ['greetingParagraph', 
         'loginText', 
         'errorMessage', 

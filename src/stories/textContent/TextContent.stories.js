@@ -1,6 +1,6 @@
 import TextContent from './TextContent.vue';
 
-export default {
+export default{
   title: 'textContent',
   component: TextContent,
 
