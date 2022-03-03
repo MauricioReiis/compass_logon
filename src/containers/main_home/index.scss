@@ -38,12 +38,9 @@ section{
                 width: 580px;
             }
 
-            @media (max-width: 414px){
-                width: 390px;
-            }
-
-            @media (max-width: 375px){
-                width: 353px;
+            @media (max-width: 667px){
+                width: 80vw;
+                height: 795px;
             }
         }
 

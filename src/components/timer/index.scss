@@ -2,6 +2,7 @@ div{
     display: flex;
     font-size: 40px;
     font-weight: 500;
+    height: 50px;
 
     @media (max-width: 1000px){
         display: none;

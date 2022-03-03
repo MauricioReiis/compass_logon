@@ -1,11 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-<<<<<<< HEAD
-// import router from '../router/index.js'
-=======
 import router from '@/router/index.js'
 import { loginValidation } from '@/constants/users.js'
->>>>>>> feature/storybook
 
 Vue.use(Vuex)
 
@@ -24,14 +20,6 @@ export default new Vuex.Store({
       state.userLogin = user
     },
 
-<<<<<<< HEAD
-    // validation(users){
-    //   array.forEach(element => {
-    //     users[0]
-        
-    //   });
-    // }
-=======
     alterPassword(state, password) {
       state.passwordLogin = password
     },
@@ -60,7 +48,6 @@ export default new Vuex.Store({
       state.statusError = false
     }
 
->>>>>>> feature/storybook
   },
 
   actions: {
