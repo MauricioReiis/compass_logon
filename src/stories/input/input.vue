@@ -1,10 +1,10 @@
 <template>
-<section>
-  <div :style="style" :class="classes">
-      <input :type="type" :placeholder="login" :class="classes" :value="text">
-      <img v-if="icon" :src="require(`../assets/${icon}.png`)">
-  </div>
-</section>
+    <section>
+        <div :class="classes">
+            <input :type="type" :placeholder="login" :class="classes" :value="text">
+            <img v-if="icon" :src="require(`../assets/${icon}.png`)">
+        </div>
+    </section>
 </template>
 
 <script>
@@ -18,21 +18,12 @@ export default {
 
         backgroundColor:{
             type: String,
-            default: 'linear-gradient(180deg, #33383D 0%, #1C1D20 100%)'
         },
 
         type:{
             type: String,
             authenticator: function(value){
                 return ['text', 'password', 'submit'].indexOf(value) !== -1
-            }
-        },
-
-        class:{
-            type: String,
-            default: false,
-            authenticator: function (value){
-                return ['error', false].indexOf(value) !== -1
             }
         },
 
@@ -85,7 +76,6 @@ div{
     height: 40px;
     width: 350px;
     padding: 10px;
-   border: solid 1px #222222;
 }
 input{
     background: transparent;
@@ -121,7 +111,4 @@ img{
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-.error{
-    border: solid 1px #E9B425;
-}
 </style>

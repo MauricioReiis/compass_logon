@@ -10,10 +10,6 @@ export default{
             options: ['text', 'password', 'submit'],
         },
 
-        class:{
-            control:{type: 'select'},
-            options: ['error', false],
-        },
 
         login:{
             control:{type: 'select'},
@@ -38,6 +34,7 @@ User.args = {
     icon: 'user',
     login: 'Usuário',
     type: 'text',
+    backgroundColor: '#222222'
 }
 
 export const Password = Template.bind({});
@@ -45,11 +42,12 @@ Password.args = {
     icon: 'password',
     login: 'Senha',
     type: 'password',
+    backgroundColor: '#222222'
 }
 
 export const Submit = Template.bind({});
 Submit.args = {
     icon: false,
     type: 'submit',
-    text: 'Continuar'
+    text: 'Continuar',
 }
