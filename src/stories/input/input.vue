@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div :class="classes">
+        <div :style="style" :class="classes">
             <input :type="type" :placeholder="login" :class="classes" :value="text">
             <img v-if="icon" :src="require(`../assets/${icon}.png`)">
         </div>
@@ -16,7 +16,7 @@ export default {
             default: ''
         },
 
-        backgroundColor:{
+        background:{
             type: String,
         },
 
@@ -39,7 +39,7 @@ export default {
             authenticator: function(value){
                 return ['user', 'password', false].indexOf(value) !== -1
             }
-        }
+        },
     },
 
     computed: {
@@ -50,7 +50,7 @@ export default {
 
     style() {
       return {
-        backgroundColor: this.backgroundColor
+        background: this.background
       };
     },
   },
@@ -76,6 +76,7 @@ div{
     height: 40px;
     width: 350px;
     padding: 10px;
+    background: linear-gradient(180deg, #33383D 0%, #1C1D20 100%);
 }
 input{
     background: transparent;
@@ -86,6 +87,7 @@ input{
     border-radius: 50px;
     padding-left: 10px;
     font-size: 16px;
+    
 }
 input:focus{
     outline: 0;
@@ -100,6 +102,7 @@ img{
     height: 20px;
     margin-top: 9px;
 }
+
 .submit{
     padding: 0;
     font-size: 18px;

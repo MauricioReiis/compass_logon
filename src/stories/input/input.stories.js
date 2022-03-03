@@ -4,12 +4,11 @@ export default{
     title: 'Input',
     component: Input,
     argTypes:{
-        backgroundColor: { control: 'color'},
+        background: { control: 'color'},
         type:{
             control:{type: 'select'},
             options: ['text', 'password', 'submit'],
         },
-
 
         login:{
             control:{type: 'select'},
@@ -34,7 +33,6 @@ User.args = {
     icon: 'user',
     login: 'Usuário',
     type: 'text',
-    backgroundColor: '#222222'
 }
 
 export const Password = Template.bind({});
@@ -42,7 +40,6 @@ Password.args = {
     icon: 'password',
     login: 'Senha',
     type: 'password',
-    backgroundColor: '#222222'
 }
 
 export const Submit = Template.bind({});
