@@ -39,9 +39,9 @@ export default {
 
     created(){
         this.countDown = 600
-        setInterval(() => {
-        this.increment()
-    }, 1000);
+            setInterval(() => {
+            this.increment()
+        }, 1000);
     }
 }
 

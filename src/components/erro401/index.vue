@@ -4,7 +4,7 @@
         <Title nameClass='erro401' type='h1' text="Error"/>
         <img draggable="false" src="@/assets/erro401.png">
         <textContent nameClass='unauthorized' text="Unauthorized"/>
-        <textContent nameClass='redirecting' text="Redirecting in 5 seconds"/>
+        <textContent nameClass='redirecting' :text="textRequire"/>
     </div>
   </section>
 </template>
@@ -20,14 +20,30 @@ export default {
         Title,
     },
 
-    methods:{
-        erro401(){
-            router.push('/login')
+    data(){
+        return{
+        seconds: '',
+        textRequire: ''
         }
     },
 
+    methods:{
+        decrement(){
+            if(this.seconds) {
+                this.seconds--;
+                if (this.seconds == 0){
+                    router.push('/login')
+                }
+            }
+        let textRequire = `Redirecting in ${this.seconds} seconds`
+        this.textRequire = textRequire
+        },
+    },
     created(){
-        setTimeout(this.erro401, 5000)
+        this.seconds = 6
+            setInterval(() => {
+                this.decrement()
+        }, 1000);
         const Title = document.getElementById("title");     
         Title.innerText = "ERROR 401";  
     }
