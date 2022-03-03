@@ -28,6 +28,8 @@ export default {
 
     created(){
         setTimeout(this.erro401, 5000)
+        const Title = document.getElementById("title");     
+        Title.innerText = "ERROR 401";  
     }
 }
 </script>

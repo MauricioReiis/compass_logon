@@ -18,6 +18,10 @@ export default {
       mainHome,
       footerHome,
   },
+  created() {     
+    const Title = document.getElementById("title");     
+    Title.innerText = "Compass | Home";   
+  },
 }
 </script>  
 

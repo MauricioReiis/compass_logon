@@ -9,6 +9,10 @@
 <script>
 export default {
     name: 'erro404',
+    created() {     
+    const Title = document.getElementById("title");     
+    Title.innerText = "ERROR 404";   
+  },
 }
 </script>
 

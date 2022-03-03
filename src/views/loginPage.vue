@@ -14,6 +14,10 @@ export default {
   components:{
     rightLogin,
     leftLogin,
-  }
+  },
+  created() {     
+    const Title = document.getElementById("title");     
+    Title.innerText = "Compass | Login";   
+  },
 }
 </script>  

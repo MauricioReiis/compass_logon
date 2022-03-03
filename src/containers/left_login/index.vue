@@ -64,7 +64,9 @@ export default {
     computed:{
       ... mapState(['statusError']),
       
-    }
+    },
+
+    
 }
 </script>
 
