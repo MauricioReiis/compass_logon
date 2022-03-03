@@ -17,8 +17,20 @@ const routes = [
   {
     path: '/home',
     name: 'home',
+    
+    component: () => import('@/components/erro401')
+  },
+  {
+    path: '/home',
+    name: 'homePage',
 
     component: () => import('@/views/homePage.vue')
+  },
+  {
+    path: '*',
+    name: 'erro404',
+
+    component: () => import('@/components/erro404')
   }
 ]
 

@@ -1,15 +1,15 @@
 <template>
   <section> 
-      <textContent textFooterContent=true :style="{'grid-column':2}" text="Essa janela do navegador é usada para manter sua sessão de autenticação ativa. 
+      <textContent nameClass='textFooterContent' text="Essa janela do navegador é usada para manter sua sessão de autenticação ativa. 
         Deixe-a aberta em segundo plano e abra uma nova janela para continuar a navegar."/>
-      <span><textContent sideBar=true :style="{'grid-column':3}" text=""/></span>
-      <textContent refreshText=true :style="{'grid-column':4}" text="Aplication refresh in"/>
-      <div :style="{'grid-column':5}">
+      <span id="sideBar"/> 
+      <textContent nameClass='refreshText' text="Aplication refresh in"/>
+      <div id="boxSeconds">
         <timer/>
-        <textContent seconds=true text="Seconds"/>
+        <textContent nameClass='seconds' text="Seconds"/>
       </div>
-      <textContent continueText=true :style="{'grid-column':7}" text="Continuar Navegando"/>
-      <div id="buttonLogout" :style="{'grid-column':8}" @click="logout">Logout</div>
+      <textContent nameClass='continueText' text="Continuar Navegando"/>
+      <div id="buttonLogout" @click="logout">Logout</div>
   </section>
 </template>
 
@@ -18,6 +18,7 @@
 import textContent from '@/components/textContent'
 import timer from '@/components/timer'
 import router from '@/router/index.js'
+import { mapMutations } from 'vuex'
 
 export default {
     name: "footerHome",
@@ -27,8 +28,10 @@ export default {
     },
 
     methods:{
+      ...mapMutations(['setStartLogout']),
       logout(){
         router.push({name:'login'})
+        this.setStartLogout()
     }
   }
 }

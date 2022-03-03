@@ -1,32 +1,29 @@
 <template>
-  <div>
-        <input :class="{inputContent: inputContentData, 
-        inputError: statusError, 
-        inputButton: inputButtonData}" 
+  <div :class="nameClass">
+        <input  
         @keyup="$emit('input',$event.target.value)" 
         :type="type" 
         :value="value" 
-        :placeholder="placeholder">       
-        <img v-if="imageName" :src="require(`@/assets/${imageName}`)" :alt="alt">
+        :placeholder="placeholder"> 
+        <img draggable="false" v-if="imageName" :src="require(`@/assets/${imageName}`)" :alt="alt">
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
 export default {
     name: "Input",
     props:{
+        nameId:{
+            type: String,
+        },
+        
         type: {
             type: String,
-            require: true,
+            default: 'null',
         },
 
-        inputContent:{
-            default: false,
-        },
-
-        inputButton:{
-            default: false,
-        },
+       nameClass:{
+           type: String,
+       },
 
         placeholder:{
             type: String,
@@ -44,17 +41,6 @@ export default {
             type: String,
         }
     },
-    data(){
-        return{
-            inputContentData: this.inputContent,
-            inputErrorData: this.inputError,
-            inputButtonData: this.inputButton,
-        }
-    },
-
-    computed:{
-        ...mapState(["statusError"])
-    }
 }
 </script>
 

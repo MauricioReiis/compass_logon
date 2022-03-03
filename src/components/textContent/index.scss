@@ -1,132 +1,127 @@
-.textDay{
-    font-size: 15px;
-}
+div{
 
-.textCity{
-    font-size: 15px;
-}
+    // LOGIN-LEFT
 
-.textFooterContent{
-    display: flex;
-    align-items: center;
-    text-align: right;
-    font-size: 11px;
-    grid-column: 2;
-    color: #FFFFFF;
-    width: 98%;
-    margin-left: 25px;
+    .greetingParagraph{
+        font-size: 16px;
+        color: #E0E0E0;
+        width: 300px;
+    }
     
-    @media (max-width: 1000px){
-        display: none;
+    .loginText{
+        display: flex;
+        text-align: start;
+        font-size: 30px;
+        color: #E0E0E0;
     }
-}
-
-.sideBar{
-    display: flex;
-    border-left: 1px solid rgb(255, 255, 255);
-    height: 6vh;
-    margin-left: 65px;
-
-    @media (max-width: 1000px){
-        display: none;
+    
+    .errorMessage{
+        display: flex;
+        font-size: 16px;
+        color: #E9B425;
+        font-weight: 400;
+        text-align: center;
+        width: 90%;
     }
-}
+    // HEADER-HOME
 
-.refreshText{
-    display: flex;
-    text-align: right;
-    font-size: 14px;
-
-    @media (max-width: 1000px){
-        display: none;
-    }
-}
-
-.seconds{
-    display: flex;
-    justify-content: center;
-    font-size: 13px; 
-
-    @media (max-width: 1200px){
-        margin-left: 80px;
-    }
-    @media (max-width: 1000px){
-        display: none;
-    }
-
-}
-
-.continueText{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    color: #C13216;
-    background-color: #ffffff;
-    height: 10vh;
-
-    @media (max-width: 1426px){
-        margin-left: -40%;
-        width: 120px;
-    } 
-
-    @media (max-width: 1280px){
-        margin-left: -60%;
-    }
-
-    @media (max-width: 1126px){
-        margin-left: -80%;
-    }
-
-    @media (max-width: 1000px){
-        position: relative;
-        overflow-x: hidden;
-        overflow-x: hidden;
-
-        width: 250%;
-        right: 500%;
-        bottom: 0px;
-    }
-
-    @media (max-width: 414px){
-        width: 450%;
-    }
-
-}
-
-.paragraphContent{
-    font-size: 20px;
-    margin-top: 10px;
-
-    @media (max-width: 1530px){
-        font-size: 17px;
-    }
-
-    @media (max-width: 1155px){
+    .textDay{
         font-size: 15px;
     }
-    @media (max-width: 1077px){
-        font-size: 12px;
+    
+    .textCity{
+        font-size: 15px;
     }
-}
 
-.greetingParagraph{
-    font-size: 16px;
-    color: #E0E0E0;
-    width: 300px;
-}
+    // MAIN-HOME
 
-.loginText{
-    font-size: 30px;
-    color: #E0E0E0;
-    margin-bottom: 20px;
-}
+    .paragraphContent{
+        font-size: 22px;
+        font-weight: 400;
+    
+        @media (max-width: 1530px){
+            font-size: 17px;
+        }
+    
+        @media (max-width: 1155px){
+            font-size: 15px;
+        }
+        @media (max-width: 1077px){
+            font-size: 12px;
+        }
+    }
+    
+    // FOOTER-HOME
 
-.errorMessage{
-    display: flex;
-    font-size: 16px;
-    color: #E9B425;
-    font-weight: 400;
-    text-align: center;
-    width: 70%;
-    margin-left: 45px;
+    .textFooterContent{
+        display: flex;
+        grid-column: 2;
+        text-align: end;
+        margin-left: 10px;
+        font-size: 11px;
+        color: #FFFFFF;
+        align-items: center; 
+    
+        @media (max-width: 1000px){
+          display: none;
+        }
+    }
+    
+    .refreshText{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-align: right;
+        font-size: 14px;
+        grid-column:4;
+        height: 100%;
+    
+        @media (max-width: 1000px){
+            display: none;
+        }
+    }
+    
+    .
+    
+    {
+        display: flex;
+        justify-content: center;
+        font-size: 13px; 
+
+        @media (max-width: 1000px){
+            display: none;
+        } 
+    }
+    
+    .continueText{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        grid-column: 7;
+        color: #C13216;
+        background-color: #ffffff;
+        height: 100%;
+        
+        @media (max-width: 1000px){
+            display: flex;
+            align-items: center;
+            grid-column: 3;
+            width: 100px;
+        } 
+    }
+
+    // ERRO 401
+    .unauthorized{
+        font-size: 40px;
+        font-weight: bold;
+        color: #222222;
+    }
+
+    .redirecting{
+        display: flex;
+        font-size: 20px;
+        color: #222222;
+        margin-top: 10px;
+    }
 }

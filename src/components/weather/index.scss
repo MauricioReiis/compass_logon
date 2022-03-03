@@ -19,12 +19,21 @@ section{
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+<<<<<<< HEAD
         margin-top: 5%;
         width: 115px;
 
         img{
             display: flex;
             height: 35px;
+=======
+        align-content: flex-start;
+        margin-bottom: 300px;
+
+        img{
+            margin-top: 10px;            
+            height: 45px;
+>>>>>>> feature/storybook
         }
     }
 }

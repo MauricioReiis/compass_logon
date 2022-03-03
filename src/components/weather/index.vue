@@ -1,7 +1,7 @@
 <template>
   <section>
     <div id="local">
-      <textContent textCity="true" :text="`${localActual}`" />
+      <textContent nameClass='textCity' :text="`${localActual}`" />
     </div>
     <div id="climate">
       <img
@@ -9,7 +9,7 @@
         :src="require(`@/assets/${imageName}.png`)"
         alt="Weather Icon"
       />
-      <Title degreesCelsius="true" type="h3" :text="`${temp}°`" />
+      <Title nameClass='degreesCelsius' type="h3" :text="`${temp}°`" />
     </div>
   </section>
 </template>
