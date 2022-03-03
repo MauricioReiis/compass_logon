@@ -33,14 +33,6 @@ const Template = (args, { argTypes }) => ({
     template: '<Input v-bind="$props" />',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
-    primary: true,
-    icon: 'user',
-    login: 'Usuário',
-    type: 'text',
-}
-
 export const User = Template.bind({});
 User.args = {
     icon: 'user',
