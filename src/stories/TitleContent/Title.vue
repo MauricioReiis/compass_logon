@@ -15,7 +15,7 @@ export default {
     text: {
       type: String,
       required: true,
-      default: "Simple text",
+      default: "Default title",
     },
 
     apply: {

@@ -5,7 +5,7 @@ export default{
     component: Title,
     color:{ control: 'color'},
     fontSize: { control: 'fontSize'},
-    backgroundColor: { control: 'backgroundColor'},
+    backgroundColor: { control: 'color'},
 
     argTypes:{
         apply:{
@@ -36,7 +36,7 @@ export const Primary = Template.bind({});
 Primary.args = {
     primary: true,
     text: 'Default title',
-    type: ''
+    type: 'h1'
 };
 
 export const firstTitle = Template.bind({});

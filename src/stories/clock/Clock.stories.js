@@ -1,8 +1,8 @@
-import Clock from './Clock.vue'
+import clock from './Clock.vue'
 
 export default{
-    title: 'Clock',
-    component: Clock,
+    title: 'clock',
+    component: clock,
     color:{ control: 'color'},
     backgroundColor: { control: 'backgroundColor'},
 
@@ -42,8 +42,8 @@ export default{
 
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
-    components: {Clock},
-    template: '<Clock v-bind=$props />'
+    components: {clock},
+    template: '<clock v-bind=$props />'
 });
 
 export const Primary = Template.bind({});
