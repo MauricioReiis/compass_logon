@@ -4,7 +4,7 @@
       <textContent nameClass='textCity' :text="`${localActual}`" />
     </div>
     <div id="climate">
-      <img
+      <img v-if="imageName"
         draggable="false"
         :src="require(`@/assets/${imageName}.png`)"
         alt="Weather Icon"
@@ -29,12 +29,12 @@ export default {
 
   data() {
     return {
-      imageName: "",
+      imageName: "sun",
       local: "",
-      temp: "",
+      temp: "39",
       regionAbbreviation: "",
       abbreviation: "",
-      localActual: "",
+      localActual: "Rio de Janeiro - RJ",
       city: "",
       hifenCity: "",
     };

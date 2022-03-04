@@ -41,6 +41,12 @@ export default {
             type: String,
         }
     },
+
+    data(){
+        return{
+            passwordSpace: false
+        }
+    },
 }
 </script>
 

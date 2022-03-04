@@ -50,10 +50,21 @@ export default {
   methods:{
     ...mapMutations(["alterUser", "alterPassword", "validationUser"]),
     callValidate(){
-      this.alterUser(this.userData)
-      this.alterPassword(this.passwordData)
-      this.validationUser()
-      this.setStyle()
+      if(localStorage.getItem("user") && localStorage.getItem("password")){
+        this.alterUser(localStorage.getItem("user")) 
+        this.alterPassword(localStorage.getItem("password"))
+        this.setStyle()
+        this.userData = localStorage.getItem("user")
+        this.passwordData = localStorage.getItem("password")
+        setTimeout(this.validationUser, 5000)
+      } else {
+        localStorage.setItem("user", this.userData)
+        localStorage.setItem("password", this.passwordData)
+        this.alterUser(this.userData)
+        this.alterPassword(this.passwordData)
+        this.validationUser()
+        this.setStyle()
+      }
     },
     setStyle(){
       if(this.statusError){
@@ -62,11 +73,16 @@ export default {
     }
   },
     computed:{
-      ... mapState(['statusError']),
+    ... mapState(['statusError']),
       
-    },
+  },
 
-    
+  created(){
+    if(localStorage.getItem("user") && localStorage.getItem("password")){
+      this.callValidate()
+    }
+  }
+
 }
 </script>
 
